@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.1">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ko"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"&gt;</p>
+<p class="p1">&lt;title&gt;고양이 쓰다듬기&lt;/title&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #fffafc;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: "Apple SD Gothic Neo", sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>touch-action: manipulation;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.cat-container {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 90vw;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width: 380px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hand {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 4rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>top: -70px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>left: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transform: translateX(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition: transform 0.15s ease-in-out;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>user-select: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.cat {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition: opacity 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hearts {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>top: -40px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>left: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transform: translateX(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 2.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>opacity: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition: opacity 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.show {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>opacity: 1;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.petting {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transform: translateX(-50%) translateY(20px);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.counter {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 1.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #ff6b9c;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="cat-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hand" id="hand"&gt;🫳&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img id="cat" class="cat" src="https://placekitten.com/360/360" alt="cat"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hearts" id="hearts"&gt;💕💕💕&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="counter" id="counter"&gt;쓰다듬기: 0번&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const hand = document.getElementById("hand");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const cat = document.getElementById("cat");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const hearts = document.getElementById("hearts");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const counter = document.getElementById("counter");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let count = 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const cats = [</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"https://placekitten.com/360/360",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"https://placekitten.com/361/360",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"https://placekitten.com/360/361",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"https://placekitten.com/362/360",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"https://placekitten.com/363/361"</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function petCat() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>count++;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>counter.textContent = `쓰다듬기: ${count}번`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>hand.classList.add("petting");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setTimeout(() =&gt; hand.classList.remove("petting"), 150);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (count % 5 === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const newCat = cats[Math.floor(Math.random() * cats.length)];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cat.style.opacity = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>cat.src = newCat;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>cat.style.opacity = 1;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}, 300);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>hearts.classList.add("show");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setTimeout(() =&gt; hearts.classList.remove("show"), 1000);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>hand.addEventListener("click", petCat);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hand.addEventListener("touchstart", (e) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>petCat();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
